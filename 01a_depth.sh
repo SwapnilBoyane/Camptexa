@@ -8,7 +8,7 @@
 #SBATCH --array=1-19
 
 #load modules
-conda activate samtools
+
 module load gcc/10.1.0
 module load r/4.3.0
 R
