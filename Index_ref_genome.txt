@@ -1,0 +1,30 @@
+## index Blochmannia reference genome ###
+
+# 1. Create .fai index with samtools
+samtools faidx C354_texanus.fasta
+
+# 2. Create .dict file with picard
+picard CreateSequenceDictionary R=C354_texanus.fasta O=C354_texanus.dict"
+
+# 3. Create BWA index files
+bwa index C354_texanus.fasta
+
+or
+
+
+#!/bin/bash
+
+# Set input FASTA file
+FASTA="C354_texanus.fasta"
+BASENAME=$(basename "$FASTA" .fasta)
+
+# 1. Create .fai index with samtools
+samtools faidx "$FASTA"
+
+# 2. Create .dict file with picard
+picard CreateSequenceDictionary R="$FASTA" O="${BASENAME}.dict"
+
+# 3. Create BWA index files
+bwa index "$FASTA"
+
+
