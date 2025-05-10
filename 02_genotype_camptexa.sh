@@ -8,8 +8,8 @@
 #SBATCH --array=1-19
 
 # Prepend bcftools path to PATH
-conda activate bcftools
-conda activate vcftools
+source activate bcftools
+source activate vcftools
 
 # define main working directory
 workdir=/lustre/scratch/sboyane/camptexa
