@@ -9,7 +9,7 @@
 #SBATCH --array=1-31
 
 
-conda activate vcftools
+source activate vcftools
 
 # define main working directory
 workdir=/lustre/scratch/sboyane/camptexa
