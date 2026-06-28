@@ -1,0 +1,23 @@
+
+# Generates 20 EEMS params files (eems_run1.params ... eems_run20.params)
+
+#
+BASEDIR="/lustre/scratch/sboyane/camptexa/camptexa/eems"
+
+for i in $(seq 1 20); do
+  cat > "${BASEDIR}/eems_run${i}.params" << EOF
+datapath = ${BASEDIR}
+mcmcpath = ${BASEDIR}/output/run${i}
+nIndiv = 16
+nSites = 13380
+nDemes = 175
+diploid = true
+numMCMCIter = 10000000
+numBurnIter = 1000000
+numThinIter = 1999
+EOF
+  mkdir -p "${BASEDIR}/output/run${i}"
+  echo "Created eems_run${i}.params -> output/run${i}"
+done
+
+echo "Done. 20 params files created in ${BASEDIR}"
