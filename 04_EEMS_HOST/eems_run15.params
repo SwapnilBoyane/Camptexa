@@ -1,9 +1,0 @@
-datapath = /lustre/scratch/sboyane/camptexa/camptexa/eems
-mcmcpath = /lustre/scratch/sboyane/camptexa/camptexa/eems/output/run15
-nIndiv = 16
-nSites = 13380
-nDemes = 90
-diploid = true
-numMCMCIter = 10000000
-numBurnIter = 1000000
-numThinIter = 1999
