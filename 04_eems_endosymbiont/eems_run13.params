@@ -1,0 +1,9 @@
+datapath = /lustre/scratch/sboyane/camptexa/camptexa/01_blochmannia/05_filtered_vcf/eems
+mcmcpath = /lustre/scratch/sboyane/camptexa/camptexa/01_blochmannia/05_filtered_vcf/eems/output/run13
+nIndiv = 16
+nSites = 41976
+nDemes = 70
+diploid = false
+numMCMCIter = 10000000
+numBurnIter = 1000000
+numThinIter = 1999
