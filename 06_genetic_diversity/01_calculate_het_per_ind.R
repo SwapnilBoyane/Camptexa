@@ -2,7 +2,7 @@
 # List all of the VCF files
 vcfs <- list.files(pattern="*simple.vcf")
 
-# Define the 28 individual names
+# list all individual ID 
 individual_names <- c(
   "C258", "C259", "C351", "C354", "C357",
   "C360", "C361", "C364", "C367", "C369",
