@@ -41,8 +41,6 @@ for (( run=$START_NUM; run<=$END_NUM; run++ )); do
 
 	~/anaconda3/envs/vcftools/bin/bcftools query -f '%POS\t%REF\t%ALT[\t%GT]\n' /lustre/scratch/sboyane/camptexa/08_phylo/windows/${chrom_array}__${start_array}__${end_array}.recode.vcf > /lustre/scratch/sboyane/camptexa/08_phylo/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf
 
-	#Rscript calculate_windows.r /lustre/scratch/sboyane/camptexa/08_phylo/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf popmap_phylo.txt
-
 	Rscript create_fasta.r /lustre/scratch/sboyane/camptexa/08_phylo/windows/${chrom_array}__${start_array}__${end_array}.simple.vcf popmap_phylo.txt
 
 	raxmlHPC-PTHREADS-SSE3 -T 2 -f a -x 50 -m GTRCAT -p 253 -N 100 -s /lustre/scratch/sboyane/camptexa/08_phylo/windows/${chrom_array}__${start_array}__${end_array}.fasta -n ${chrom_array}__${start_array}__${end_array}.tre -w /lustre/scratch/sboyane/camptexa/08_phylo/windows/
