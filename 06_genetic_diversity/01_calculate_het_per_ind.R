@@ -8,7 +8,6 @@ individual_names <- c(
   "C360", "C361", "C364", "C367", "C369",
   "C424", "C426", "C428", "C430", "C431",
   "C432")
-
 # Write column headers to 'output.het.txt'
 write(
   c(
@@ -20,13 +19,12 @@ write(
   ncolumns = 33,
   sep = "\t"
 )
-
 # loop over each VCF file to calculate total and het sites
 for (a in 1:length(vcfs)) { 
   # Vectors for output
   indiv_het_sites <- c()
   indiv_total <- c()
-  
+
   # Read the VCF file
   vcf_file <- read.table(vcfs[a], stringsAsFactors = FALSE)
   
