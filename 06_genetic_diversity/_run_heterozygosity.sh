@@ -14,6 +14,4 @@ R
 
 cd /lustre/scratch/sboyane/camptexa/08_OH
 
-#Rscript calculate_heterozygosity.r
-
 Rscript calculate_het_per_ind.R
