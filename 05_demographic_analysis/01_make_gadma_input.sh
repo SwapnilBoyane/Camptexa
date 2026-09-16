@@ -17,4 +17,4 @@ source activate easySFS
   -i camptexa_gadma_biallelic.vcf \
   -p popmap_gadma.txt \
   -o easysfs_out_final \
-  -a --proj=4,8,8 --total-length 191593143
+  -a --proj=4, 10, 20 --total-length 196670629
