@@ -1,59 +1,42 @@
-#    It is a parameters file for GADMA software.
+# Parameter file
+# Output and input
+Output directory: texanus_outgroup_final_v5
+Input data: easysfs_outgroup_new/dadi/outgroup-west-central.sfs
+Population labels: outgroup, west, central
 
-#    Lines started from # are ignored.
-#    Also comments at the end of a line are ignored too.
-#    Every line contains: Identificator of parameter : value.
-
-#!!!     means pay attention to this parameter, they are primary.
-
-#!!!
-#    Output directory to write all GADMA out.
-#    One need to set it to a missing or empty directory.
-#    If it is resumed from other directory and output directory 
-#    isn't set, GADMA will add '_resumed' for previous output 
-#    directory.
-Output directory: /lustre/scratch/sboyane/camptexa/09_gadma/texanus_final_gadma
-Input data: /lustre/scratch/sboyane/camptexa/09_gadma/easysfs_out_final/dadi/schaefferi-west-central.sfs
-Population labels: [schaefferi, west, central]
-Projections: [4, 8, 8]
-Outgroup: False
-Sequence length: 191593143
+# Settings
+#snps + invariant
+Sequence length: 196670629
 Linked SNP's: True
-Directory with bootstrap: Null
+
+# Has data outgroup
+Outgroup: False
+
+# Main parameters
 Engine: moments
-Pts: [10, 20, 30]
 Relative parameters: False
-Theta0: Null
+
+# based on Smed estimate
 Mutation rate: 1.983877e-09
-Recombination rate: Null
 Time for generation: 6
-Custom filename: Null
-Lower bound: Null
-Upper bound: Null
-Parameter identifiers: Null
-Initial structure: [1, 1, 1]
-Final structure: [1, 1, 1]
-Only sudden: False
-Dynamics: [Sud, Lin, Exp]
-No migrations: False
-Symmetric migrations: True
-Migration masks: Null
-Selection: False
-Dominance: False
-Split fractions: False
-Inbreeding: False
-Ancestral size as parameter: False
-Upper bound of first split: Null
-Upper bound of second split: Null
-Local optimizer: BFGS_log
-Print models' code every N iteration: 0
+
+# History parameters
+Initial structure: [1,1,1]
+Final structure: [1,1,1]
+Symmetric migrations: False
+
+# Epoch 1: no migration between schaefferi/outgroup and the ancestor of west+central
+# Epoch 2: migration allowed among ALL pairs (outgroup-west, outgroup-central, west-central)
+# (v4's fully-isolated-outgroup mask produced a degenerate fit - reverting epoch 2 to unrestricted)
+
+# Bounds - widened on both ends since earlier runs pinned nu11 and t1 at the ceiling,
+# and separate models have shown other Ne parameters pinning at the floor
+Upper bound: 500
+
+# Output params
 Model plot engine: moments
-Draw models every N iteration: 0
 Units of time in drawing: years
-Vmin: 1
-Silence: False
-Verbose: 1
-Number of repeats: 10
-Number of processes: 10
-Resume from: Null
-Only models: False
+
+# Run params
+Number of repeats: 20
+Number of processes: 20
