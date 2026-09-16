@@ -25,12 +25,6 @@ Initial structure: [1,1,1]
 Final structure: [1,1,1]
 Symmetric migrations: False
 
-# Epoch 1: no migration between schaefferi/outgroup and the ancestor of west+central
-# Epoch 2: migration allowed among ALL pairs (outgroup-west, outgroup-central, west-central)
-# (v4's fully-isolated-outgroup mask produced a degenerate fit - reverting epoch 2 to unrestricted)
-
-# Bounds - widened on both ends since earlier runs pinned nu11 and t1 at the ceiling,
-# and separate models have shown other Ne parameters pinning at the floor
 Upper bound: 500
 
 # Output params
