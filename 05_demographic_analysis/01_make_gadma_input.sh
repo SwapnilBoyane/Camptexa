@@ -16,5 +16,5 @@ source activate easySFS
 ~/easySFS/easySFS.py \
   -i camptexa_gadma_biallelic.vcf \
   -p popmap_gadma.txt \
-  -o easysfs_out_new \
+  -o easysfs_outgroup_new \
   -a --proj=4, 10, 20 --total-length 196670629
