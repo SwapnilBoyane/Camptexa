@@ -34,42 +34,38 @@
 1. camp_sp_genome_filtered.fasta.fai: Reference genome index file
 2. "phylo50kbp_array.sh" phylogeny submission script.
 3. "create_fasta_from_vcf.r", "create_fasta.r", "popmap_phylo.txt", "tree_helper_chrom.txt", "tree_helper_end.txt", "tree_helper_start.txt" supporting files for phylo50kbp_array.sh script.
-4. 04_combine_trees_Camponotus.r: Combine all individual RAxML_bipartitions.tre files into a single file.
-5. 05_species_trees.sh: contains script to generate Maximum Clade Credibility tree using DendroPy and a species tree using ASTRAL.
+4. combine_trees_Camponotus.r: Combine all individual RAxML_bipartitions.tre files into a single file.
+5. species_trees.sh: contains script to generate Maximum Clade Credibility tree using DendroPy and a species tree using ASTRAL.
 
 **Phylogeny of endosymbiont**
 
 I used https://github.com/edgardomortiz/vcf2phylip/blob/master/vcf2phylip.py to convert vcf format snps to phylip format and then ran RAxML analysis.
 
-**EEMS**
+**04_eems_endosymbiont**
 
-*Host* 
-1. 01_host_vcf2diffs_script.R: Convert vcf filre to .diffs.
-2. laevigatus_eems.coord: File with sample coordinates
-3. laevigatus_eems.diffs: Genetic distances for eems
-4. laevigatus_eems.outer: Outer boundries for EEMS
-5. laevigatus_eems.params: Contains parameter for EEMS
-6. _run_camplaevi_eems.sh: Slurm array job for EEMS
+1. 01_endosymbiont_vcf2diffs_script.R: Convert vcf file to .diffs.
+2. eems.coord: File with sample coordinates
+3. eems.diffs: Genetic distances for eems
+4. eems.outer: Outer boundries for eems
+5. eems_run1.params to eems_run20.params: Contains parameter for eems 20 runs.
+6. eems_run1_20.sh: Slurm array job for eems
 
-*Endosymbiont*
-1. 01_endosymbiont_vcf2diffs_script.R: Convert vcf filre to .diffs.
-2. blochmannia_eems.coord: File with sample coordinates
-3. blochmannia_eems.diffs: Genetic distances for eems
-4. blochmannia_eems.outer: Outer boundries for EEMS
-5. blochmannia_eems.params: Contains parameter for EEMS
-6. _run_blochmannia_eems.sh: Slurm array job for EEMS
+**05_eems_host**
 
-**Relatedness**
-1. 01_concatenate_vcf_files.sh: Concatenate the vcf files.
-2. 01b_filter_relatedness.sh: filtering script for relatedness analysis.
-3. 02_move_files_convert.sh: convert simple vcf to .related format.
-4. 03_plot_kinship-relatedness.r: plotting script for relatedness analsys.
-5. vcf_to_related.r: script to convert vcf to related for the analysis.
+1. 01_host_vcf2diffs_script.R: Convert vcf file to .diffs.
+2. eems.coord: File with sample coordinates
+3. eems.diffs: Genetic distances for eems
+4. eems.outer: Outer boundries for eems
+5. "eems_run1.params" to "eems_run20.params": Contains parameter for eems 20 runs.
+6. eems_run1_20.sh: Slurm array job for eems
 
-**GADMA**
-1. _01_make_GADMA_input.sh: run --preview and make SFS for GADMA.
-2. _02_GADMA_run.sh: contains script to run GADMA.
-3. param_easySFS_3_gadma_years101020.txt: parameters used in GADMA
+**05_demographic_analysis**
+
+1. 01_make_GADMA_input.sh: run --preview and make SFS for GADMA.
+2. 02_GADMA_run.sh: contains script to run GADMA.
+3. param_file.txt: parameters used in GADMA
+4. popmap_gadma.txt: sample id for GADMA
+   
 
 
 
