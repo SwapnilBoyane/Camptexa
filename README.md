@@ -10,7 +10,7 @@
 6. Run "03_merge_vcf_host.sh" to merge all individuals into VCF format 
 7. Run "04_filter_host.sh"to filter SNPs for downstream analyses. This script includes filtering scheme for all downstream analyses.
 
-# Blochmanniella Genome assembly
+# Blochmanniella genome assembly
 01_minys_blochmannia.sh was used to assemble endosymbiont genome.  
 
 # Blochmanniella pipeline (endosymbiont)
