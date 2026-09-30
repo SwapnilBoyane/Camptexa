@@ -50,7 +50,7 @@ I used https://github.com/edgardomortiz/vcf2phylip/blob/master/vcf2phylip.py to 
 5. eems_run1.params to eems_run20.params: Contains parameter for eems 20 runs.
 6. eems_run1_20.sh: Slurm array job for eems
 
-**05_eems_host**
+**04_eems_host**
 
 1. 01_host_vcf2diffs_script.R: Convert vcf file to .diffs.
 2. eems.coord: File with sample coordinates
