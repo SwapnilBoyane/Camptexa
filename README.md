@@ -22,14 +22,18 @@
 
 # Analyses
 
-**01_Population Structure**
+**01_population_structure**
 1. Run "pca_host_endosymbiont.sh" to perform Principal component analysis for both host and endosymbiont.
 2. Run "admixture_host.sh" to perform ADMIXTURE analysis of host.
 
-**Phylogeny of Host**
-1. 01_concatenate_vcf_files.sh: Concatenate the vcf files.
-2. 02_camp_sp_genome_filtered.fasta.fai: Reference index file
-3. 03_phylo_50kbp.r: This creates the tree_50kbp/ directory containing the phylo50kbp_array.sh submission script. Submit "phylo50kbp_array.sh" to array job for running.
+**02_genetic_diversity**
+1. 01_calculate_het_per_ind.R script to calculate observed heterozygosity.
+2. _run_heterozygosity.sh submission script.
+
+**03_host_phylogeny**
+1. camp_sp_genome_filtered.fasta.fai: Reference genome index file
+2. "phylo50kbp_array.sh" phylogeny submission script.
+3. "create_fasta_from_vcf.r", "create_fasta.r", "popmap_phylo.txt", "tree_helper_chrom.txt", "tree_helper_end.txt", "tree_helper_start.txt" supporting files for phylo50kbp_array.sh script.
 4. 04_combine_trees_Camponotus.r: Combine all individual RAxML_bipartitions.tre files into a single file.
 5. 05_species_trees.sh: contains script to generate Maximum Clade Credibility tree using DendroPy and a species tree using ASTRAL.
 
