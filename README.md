@@ -22,9 +22,9 @@
 
 # Analyses
 
-**Population Structure**
-1. Run "01_PCA_analysis" to perform Principal component analysis for both host and endosymbiont.
-2. Run "02_Admixture.sh" to perform ADMIXTURE analysis.
+**01_Population Structure**
+1. Run "pca_host_endosymbiont.sh" to perform Principal component analysis for both host and endosymbiont.
+2. Run "admixture_host.sh" to perform ADMIXTURE analysis of host.
 
 **Phylogeny of Host**
 1. 01_concatenate_vcf_files.sh: Concatenate the vcf files.
